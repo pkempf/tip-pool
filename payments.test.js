@@ -68,8 +68,8 @@ describe("Payments test, with setup and tear-down", function () {
   it("shouldn't make a new payment when createCurPayment() is called with empty input", function () {
     console.log("Payments test - createCurPayment() with empty input");
 
-    billAmtInput = "";
-    tipAmtInput = "";
+    billAmtInput.value = "";
+    tipAmtInput.value = "";
 
     let testPayment = createCurPayment();
     expect(testPayment).toEqual(undefined);
